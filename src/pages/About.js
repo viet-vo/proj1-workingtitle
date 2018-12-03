@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
+import NextBut from "../components/NextBut"
 
 const About = () => (
   <div>
@@ -21,14 +22,12 @@ const About = () => (
           <p>
             I am a super excited person entering the wonderful world of web development!
           </p>
-          <p>
-            Phasellus at rutrum nisl. Praesent sed massa ut ipsum bibendum porttitor. Sed malesuada
-            molestie velit ac viverra. Quisque a ullamcorper purus. Curabitur luctus mi ac mi
-            hendrerit semper. Nulla tincidunt accumsan lobortis. Mauris convallis sapien non nibh
-            porta accumsan. Nunc volutpat tempus porttitor. Nunc congue dictum egestas. Aliquam
-            blandit mi eu urna scelerisque, vitae volutpat ligula ultricies. Maecenas vel porta
-            augue. Fusce mauris ex, dignissim et lacinia ut, tempus eget nibh.
-          </p>
+          <h4>
+            My current knowledge-base includes:
+          </h4>
+          <ul>
+            <li></li>
+          </ul>
           <p>
             Etiam ut massa efficitur, gravida sapien non, condimentum sapien. Suspendisse massa
             tortor, facilisis in neque sit amet, scelerisque elementum tortor. Nullam eget nibh sit
@@ -42,8 +41,10 @@ const About = () => (
             tempor sem rhoncus porta semper. Proin bibendum vulputate nisl, fringilla interdum elit
             pulvinar eu. Quisque vitae quam dapibus, vestibulum mauris quis, laoreet massa.
           </p>
+          <NextBut>Portfolio</NextBut>
         </Col>
       </Row>
+      
     </Container>
   </div>
 );
