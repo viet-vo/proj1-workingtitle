@@ -1,9 +1,9 @@
 .footer {
   min-height: 0;
   background: #E5E5E5;
-  position: absolute;
+  position: fixed;
   left: 0;
-  bottom: -100px;
+  bottom: -0px;
   width: 100%;
 }
 

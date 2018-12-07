@@ -2,21 +2,34 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import Card from "../components/Card";
 import Alert from "../components/Alert";
+import posed from "react-pose";
 
-class Discover extends Component {
+const Box = posed.div({
+  visible: { 
+    opacity: 1,
+    transition: { duration: 300}
+  }
+});
+
+class Portfolio extends Component {
+  Box = posed.div({
+    hidden: {
+      opacity: 0
+    },
+    visible: { 
+      opacity: 1,
+      transition: { duration: 300}
+    }
+  });
+  
   state = {
-    image: "",
-    match: false,
-    matchCount: 0
   };
-
-  // When the component mounts, load the next dog to be displayed
+  
   componentDidMount() {
     this.loadNextDog();
   }
 
   handleBtnClick = event => {
-    // Get the data-value of the clicked button
     const btnType = event.target.attributes.getNamedItem("data-value").value;
     // Clone this.state to the newState object
     // We'll modify this object and use it to set our component's state
@@ -51,10 +64,10 @@ class Discover extends Component {
 
   render() {
     return (
-      <div>
-        <h1 className="text-center">Make New Friends</h1>
+      <Box className="box" pose={this.state.isVisble ? 'visible' : 'hidden'}>
+        <h1 className="text-center">Feel free to browse my projects highlighted here or others on my Github </h1>
         <h3 className="text-center">
-          Thumbs up on any pups you'd like to meet!
+          
         </h3>
         <Card image={this.state.image} handleBtnClick={this.handleBtnClick} />
         <h1 className="text-center">
@@ -63,9 +76,9 @@ class Discover extends Component {
         <Alert style={{ opacity: this.state.match ? 1 : 0 }} type="success">
           Yay! That Pup Liked You Too!!!
         </Alert>
-      </div>
+      </Box>
     );
   }
 }
 
-export default Discover;
+export default Portfolio;
